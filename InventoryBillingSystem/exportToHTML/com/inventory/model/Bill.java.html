@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>Bill.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Bill.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">inventory</span><span class="s2">.</span><span class="s1">model</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayList</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Date</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">List</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Bill </span><span class="s2">{</span>
+    <span class="s0">private int </span><span class="s1">billID</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">Date billDate</span><span class="s2">;</span>
+    <span class="s0">private double </span><span class="s1">totalAmount</span><span class="s2">;</span>
+    <span class="s0">private int </span><span class="s1">cashierID</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">BillItem</span><span class="s2">&gt; </span><span class="s1">items</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">Bill</span><span class="s2">(</span><span class="s0">int </span><span class="s1">billID</span><span class="s2">, </span><span class="s0">int </span><span class="s1">cashierID</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">billID </span><span class="s2">= </span><span class="s1">billID</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">cashierID </span><span class="s2">= </span><span class="s1">cashierID</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">billDate </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Date</span><span class="s2">();</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">items </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ArrayList</span><span class="s2">&lt;&gt;();</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">totalAmount </span><span class="s2">= </span><span class="s3">0.0</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public int </span><span class="s1">getBillID</span><span class="s2">() { </span><span class="s0">return </span><span class="s1">billID</span><span class="s2">; }</span>
+    <span class="s0">public void </span><span class="s1">setBillID</span><span class="s2">(</span><span class="s0">int </span><span class="s1">billID</span><span class="s2">) { </span><span class="s0">this</span><span class="s2">.</span><span class="s1">billID </span><span class="s2">= </span><span class="s1">billID</span><span class="s2">; }</span>
+    <span class="s0">public </span><span class="s1">Date getBillDate</span><span class="s2">() { </span><span class="s0">return </span><span class="s1">billDate</span><span class="s2">; }</span>
+    <span class="s0">public void </span><span class="s1">setBillDate</span><span class="s2">(</span><span class="s1">Date billDate</span><span class="s2">) { </span><span class="s0">this</span><span class="s2">.</span><span class="s1">billDate </span><span class="s2">= </span><span class="s1">billDate</span><span class="s2">; }</span>
+    <span class="s0">public double </span><span class="s1">getTotalAmount</span><span class="s2">() { </span><span class="s0">return </span><span class="s1">totalAmount</span><span class="s2">; }</span>
+    <span class="s0">public void </span><span class="s1">setTotalAmount</span><span class="s2">(</span><span class="s0">double </span><span class="s1">totalAmount</span><span class="s2">) { </span><span class="s0">this</span><span class="s2">.</span><span class="s1">totalAmount </span><span class="s2">= </span><span class="s1">totalAmount</span><span class="s2">; }</span>
+    <span class="s0">public int </span><span class="s1">getCashierID</span><span class="s2">() { </span><span class="s0">return </span><span class="s1">cashierID</span><span class="s2">; }</span>
+    <span class="s0">public void </span><span class="s1">setCashierID</span><span class="s2">(</span><span class="s0">int </span><span class="s1">cashierID</span><span class="s2">) { </span><span class="s0">this</span><span class="s2">.</span><span class="s1">cashierID </span><span class="s2">= </span><span class="s1">cashierID</span><span class="s2">; }</span>
+    <span class="s0">public </span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">BillItem</span><span class="s2">&gt; </span><span class="s1">getItems</span><span class="s2">() { </span><span class="s0">return </span><span class="s1">items</span><span class="s2">; }</span>
+    <span class="s0">public void </span><span class="s1">setItems</span><span class="s2">(</span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">BillItem</span><span class="s2">&gt; </span><span class="s1">items</span><span class="s2">) { </span><span class="s0">this</span><span class="s2">.</span><span class="s1">items </span><span class="s2">= </span><span class="s1">items</span><span class="s2">; }</span>
+
+    <span class="s0">public void </span><span class="s1">addItem</span><span class="s2">(</span><span class="s1">BillItem item</span><span class="s2">) {</span>
+        <span class="s1">items</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">item</span><span class="s2">);</span>
+        <span class="s1">totalAmount </span><span class="s2">= </span><span class="s1">calculateTotal</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">removeItem</span><span class="s2">(</span><span class="s0">int </span><span class="s1">billItemID</span><span class="s2">) {</span>
+        <span class="s1">items</span><span class="s2">.</span><span class="s1">removeIf</span><span class="s2">(</span><span class="s1">item -&gt; item</span><span class="s2">.</span><span class="s1">getBillItemID</span><span class="s2">() == </span><span class="s1">billItemID</span><span class="s2">);</span>
+        <span class="s1">totalAmount </span><span class="s2">= </span><span class="s1">calculateTotal</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public double </span><span class="s1">calculateTotal</span><span class="s2">() {</span>
+        <span class="s0">double </span><span class="s1">total </span><span class="s2">= </span><span class="s3">0</span><span class="s2">;</span>
+        <span class="s0">for </span><span class="s2">(</span><span class="s1">BillItem item </span><span class="s2">: </span><span class="s1">items</span><span class="s2">) {</span>
+            <span class="s1">total </span><span class="s2">+= </span><span class="s1">item</span><span class="s2">.</span><span class="s1">getSubtotal</span><span class="s2">();</span>
+        <span class="s2">}</span>
+        <span class="s0">return </span><span class="s1">total</span><span class="s2">;</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
